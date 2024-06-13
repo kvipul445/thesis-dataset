@@ -11,8 +11,11 @@ if __name__ == "__main__":
         for fil in f:
             file_path = os.path.join('./images/' + d + "/" + fil)
             print(file_path)
-            new_name = str(i) + "-" + d + "." + fil.split('.')[1]
+            new_name = str(i) + "-" + d + ".txt"
             print(new_name)
-            new_file_name = os.path.join('./images/' + d + "/" + new_name)
+            new_file_name = os.path.join('./text/' + d + "/" + new_name)
             i += 1
-            os.rename(file_path, new_file_name)
+            try:
+                f = open(new_file_name, 'x')
+            except Exception as e:
+                print(e)
