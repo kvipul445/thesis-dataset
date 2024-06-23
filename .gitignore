@@ -4,3 +4,4 @@ coco_caption
 __pycache__
 data/*
 coco_train
+*.py
